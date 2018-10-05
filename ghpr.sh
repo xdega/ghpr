@@ -30,11 +30,7 @@ if ! [[ $branch =~ ^([A-Za-z0-9-]*)-([A-Za-z0-9]*)$ ]]; then
 fi
 name=$(echo ${BASH_REMATCH[1]} | sed 's/-/ /g')
 name=$(echo $name | awk '{for (i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) substr($i,2)} 1')
-tag=${BASH_REMATCH[2]}
-if [ ${#tag} -gt 3 ]; then
-    tag="cur"
-fi
-title="[$tag] $name"
+title="$name"
 
 head="$org:$branch"
 
