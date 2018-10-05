@@ -6,3 +6,5 @@ A personal token for the GitHub API is required to create pull requests. Generat
 ```
 export GITHUB_TOKEN="INSERT_TOKEN_HERE"
 ```
+
+Original credit goes to https://github.com/allknowingfrog
